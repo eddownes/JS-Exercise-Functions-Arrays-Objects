@@ -61,7 +61,7 @@ function temperatureCtoF(celciusTemp) {
  * ### Challenge `temperatureInF`
  * 
  * @instructions
- * This function should take an a temperature and a unit (either 'F' or 'C') as arguments,
+ * This function should take an a temperature and a (either 'F' or 'C') as arguments,
  * and return the temperature in fahrenheit, rounded to the nearest whole number. 
  * 
  * For example, if we invoke `temperatureInF`
@@ -74,8 +74,12 @@ function temperatureCtoF(celciusTemp) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(tempInput, unitImput) {
+  if (unitImput === 'F') {
+    return (Math.round(tempInput) + 'F');
+  } else  {
+    return temperatureCtoF(tempInput) + 'F';
+  }
 }
 
 
@@ -95,8 +99,21 @@ function temperatureInF(/* code here */) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+// function makePersonObject(id, name, email) {
+//   return {
+//     id: id,
+//     name: name,
+//     email: email,
+//   }
+// }
+
+function makePersonObject(id, name, email) {
+  const personObject = {
+    id: id,
+    name: name,
+    email: email
+  }
+  return personObject;
 }
 
 /**
@@ -112,8 +129,9 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(person) {
+ 
+  return `Hello, my name is ${person.name}`;
 }
 
 
@@ -132,8 +150,12 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
+function appleIndex(arr) {
+  for (let i = 0; i < arr.length; i++)  {
+    if (arr[i] === 'apple') {
+      return i;
+    }
+  }
 }
 
 /**
