@@ -177,12 +177,13 @@ function isItAnApple(arr) {
   let newArray = [];
     for (let i = 0; i < arr.length; i++)  {
       if (arr[i] === 'apples')  {
-        newArray[i] = true;
+        newArray[i] = 'true';
         
     } else  {
-        newArray[i] = false;
+        newArray[i] = 'false';
         
     }
+    console.log(newArray);
     return newArray;
   }
   
